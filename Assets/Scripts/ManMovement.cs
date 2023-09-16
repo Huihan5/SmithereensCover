@@ -22,7 +22,7 @@ public class ManMovement : MonoBehaviour
     {
         if (hit)
         {
-            myAnim.SetBool("Hitted", true);
+            //myAnim.SetBool("Hitted", true);
             hittedTime = 0;
             hit = false;
         }
@@ -34,12 +34,15 @@ public class ManMovement : MonoBehaviour
 
         if (hittedTime >= hitTime)
         {
-            myAnim.SetBool("Hitted", false);
+            //myAnim.SetBool("Hitted", false);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        hit = true;
+        if (collision.gameObject.tag == "Bullet")
+        {
+            hit = true;
+        }
     }
 }
