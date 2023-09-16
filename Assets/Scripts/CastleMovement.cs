@@ -18,7 +18,7 @@ public class CastleMovement : MonoBehaviour
 
     SpriteRenderer myRend;
 
-    public GameObject manager;
+    public GameObject socreManager;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +38,10 @@ public class CastleMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         health--;
+
+        ScoreManager.instance.AddPointRed();
 
         if(health == 9)
         {

@@ -11,6 +11,8 @@ public class ShooterMovement : MonoBehaviour
 
     public float shootTime = 1;
     public float coolDown = 5;
+    public float holdingTimeRed = 0f;
+    public float holdingTimeBlue = 0f;
 
     Animator myAnim;
 
@@ -41,23 +43,48 @@ public class ShooterMovement : MonoBehaviour
         //shootfire
         if (coolDown >= 5)
         {
-            //or try Input.GetKeyDown("FireRed")
-
-            if (Input.GetKeyDown(KeyCode.D) && red)
+            //holding
+            if(Input.GetKeyDown(KeyCode.D) && red)
             {
-                shoot();
+                holdingTimeRed++;
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && !red)
+            {
+                holdingTimeBlue++;
+            }
+
+            //shot
+            if (Input.GetKeyUp(KeyCode.D) && red)
+            {
+                shootRed();
+                holdingTimeRed = 0;
                 Debug.Log("shootRed");
             }
 
             if (Input.GetKeyDown(KeyCode.LeftArrow) && !red)
             {
-                shoot();
+                shootBlue();
+                holdingTimeBlue = 0;
                 Debug.Log("shootBlue");
             }
         }
     }
 
-    void shoot()
+    void shootRed()
+    {
+        shootTime = 1;
+
+        Vector3 bulletPos = transform.position + new Vector3(3, 3, 0);
+
+        var Bullet = Instantiate(bullet, bulletPos, Quaternion.identity);
+
+        //Bullet.bulletSpeed *= holdingTimeRed;
+
+        coolDown = 0;
+    }
+
+    void shootBlue()
     {
         shootTime = 1;
 
