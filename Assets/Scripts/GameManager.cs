@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class gameManager : MonoBehaviour
 {
 
     public bool gameover;
@@ -16,6 +16,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameover)
+        {
+            //termNumber++;
+            //scoreRed = 0;
+            //scoreBlue = 0;
+            gameover = false;
+        }
     }
 }

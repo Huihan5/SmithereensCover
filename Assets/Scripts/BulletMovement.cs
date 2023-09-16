@@ -46,11 +46,11 @@ public class BulletMovement : MonoBehaviour
 
         if(transform.position.y < 0)
         {
-            transform.position += new Vector3(0, 1*Time.deltaTime, 0);
+            transform.position += new Vector3(0, 2*Time.deltaTime, 0);
         }
         else
         {
-            transform.position += new Vector3(0, -1*Time.deltaTime, 0);
+            transform.position += new Vector3(0, -2*Time.deltaTime, 0);
         }
 
 
@@ -64,24 +64,26 @@ public class BulletMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
 
-        if (collision.gameObject.tag == "Castle")
-        {
-            Destroy(gameObject);
-        }
+        //if (collision.gameObject.tag == "Player")
+        //{
+        //    Destroy(gameObject);
+        //}
 
-        if (collision.gameObject.tag == "Cart")
-        {
-            Destroy(gameObject);
-        }
+        //if (collision.gameObject.tag == "Castle")
+        //{
+        //    Destroy(gameObject);
+        //}
 
-        if (collision.gameObject.name == "Ground")
-        {
-            Destroy(gameObject);
-        }
+        //if (collision.gameObject.tag == "Cart")
+        //{
+        //    Destroy(gameObject);
+        //}
+
+        //if (collision.gameObject.name == "Ground")
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 }

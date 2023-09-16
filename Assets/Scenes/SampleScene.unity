@@ -123,6 +123,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &158008086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4781922430830839417, guid: 97f754b2305194cfb8ef63fac8858ddf, type: 3}
+  m_PrefabInstance: {fileID: 4781922429289179691}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &158008091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158008086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 682eff02b6002461bb1ee6d90f17d7ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hit: 0
+  hitTime: 3
+  hittedTime: 3
 --- !u!1001 &391050043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -255,7 +275,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -8107369194449882705, guid: 00952061f03df4571a29f8bf2c895aeb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 00952061f03df4571a29f8bf2c895aeb, type: 3}
 --- !u!1 &519420028
 GameObject:
@@ -341,6 +362,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &524431830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5883372427627825509, guid: 00952061f03df4571a29f8bf2c895aeb, type: 3}
+  m_PrefabInstance: {fileID: 515933422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &524431835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524431830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d5730c011db4e1192af71c67c65440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  red: 0
+  bullet: {fileID: 0}
+  shootTime: 1
+  coolDown: 3
+  currentcoolDown: 3
+  holdingTimeRed: 0
+  holdingTimeBlue: 0
 --- !u!1 &544579369
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,9 +531,9 @@ GameObject:
   m_Component:
   - component: {fileID: 671750782}
   - component: {fileID: 671750781}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -632,6 +677,50 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &890303194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4781922430830839417, guid: 97f754b2305194cfb8ef63fac8858ddf, type: 3}
+  m_PrefabInstance: {fileID: 391050043}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &890303199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890303194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 682eff02b6002461bb1ee6d90f17d7ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hit: 0
+  hitTime: 3
+  hittedTime: 3
+--- !u!1 &1613073202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5883372427627825509, guid: 00952061f03df4571a29f8bf2c895aeb, type: 3}
+  m_PrefabInstance: {fileID: 5883372427216722312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1613073207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613073202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d5730c011db4e1192af71c67c65440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  red: 0
+  bullet: {fileID: 0}
+  shootTime: 1
+  coolDown: 3
+  currentcoolDown: 3
+  holdingTimeRed: 0
+  holdingTimeBlue: 0
 --- !u!1001 &1714387485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1077,5 +1166,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -8107369194449882705, guid: 00952061f03df4571a29f8bf2c895aeb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 00952061f03df4571a29f8bf2c895aeb, type: 3}

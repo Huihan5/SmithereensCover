@@ -34,7 +34,6 @@ public class CastleMovement : MonoBehaviour
     {
         if (health == 0)
         {
-            //manager.SetActive(true);
             Destroy(gameObject);
         }
 
