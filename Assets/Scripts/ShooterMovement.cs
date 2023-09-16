@@ -10,7 +10,8 @@ public class ShooterMovement : MonoBehaviour
     public GameObject bullet;
 
     public float shootTime = 1;
-    public float coolDown = 5;
+    public float coolDown = 3;
+    public float currentcoolDown = 3;
     public float holdingTimeRed = 0f;
     public float holdingTimeBlue = 0f;
 
@@ -25,9 +26,9 @@ public class ShooterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(coolDown <= 5)
+        if(currentcoolDown <= coolDown)
         {
-            coolDown += Time.deltaTime;
+            currentcoolDown += Time.deltaTime;
         }
 
         if(shootTime >= 0)
@@ -41,7 +42,7 @@ public class ShooterMovement : MonoBehaviour
         }
 
         //shootfire
-        if (coolDown >= 5)
+        if (currentcoolDown >= coolDown)
         {
             //holding
             if(Input.GetKeyDown(KeyCode.D) && red)
@@ -81,17 +82,17 @@ public class ShooterMovement : MonoBehaviour
 
         //Bullet.bulletSpeed *= holdingTimeRed;
 
-        coolDown = 0;
+        currentcoolDown = 0;
     }
 
     void shootBlue()
     {
         shootTime = 1;
 
-        Vector3 bulletPos = transform.position + new Vector3(3, 3, 0);
+        Vector3 bulletPos = transform.position + new Vector3(-3, 3, 0);
 
         var Bullet = Instantiate(bullet, bulletPos, Quaternion.identity);
 
-        coolDown = 0;
+        currentcoolDown = 0;
     }
 }
