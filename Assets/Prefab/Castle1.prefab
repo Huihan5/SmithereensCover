@@ -124,3 +124,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7e8e2b27f7144eaab550cbf240096c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 10
+  health9: {fileID: 0}
+  health8: {fileID: 0}
+  health7: {fileID: 0}
+  health6: {fileID: 0}
+  health5: {fileID: 0}
+  health4: {fileID: 0}
+  health3: {fileID: 0}
+  health2: {fileID: 0}
+  health1: {fileID: 0}
+  manager: {fileID: 0}

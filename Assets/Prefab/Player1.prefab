@@ -100,8 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   red: 1
   bullet: {fileID: 6373894213000985214, guid: ae08816d19f904d6987b7d146e6782cc, type: 3}
-  bulletPos: {fileID: 0}
-  bulletSpeed: 5
+  shootTime: 1
+  coolDown: 5
 --- !u!61 &4781922430830839421
 BoxCollider2D:
   m_ObjectHideFlags: 0
