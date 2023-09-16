@@ -30,7 +30,7 @@ public class BulletMovement : MonoBehaviour
     void Update()
     {
         //self-destroy
-        if(-500 < transform.position.x || transform.position.x < 500)
+        if(-500 > transform.position.x || transform.position.x > 500)
         {
             Destroy(gameObject);
         }
